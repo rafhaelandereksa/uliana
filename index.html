@@ -3,693 +3,500 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Uliana Citra Br. Sitorus | Portofolio Guru Profesional</title>
+<meta name="description" content="Portofolio Uliana Citra Br. Sitorus, guru profesional yang berfokus pada pembelajaran inovatif dan pembentukan karakter siswa.">
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-}
-
 :root{
-    --primary:#b76e79;
-    --secondary:#fdf4f6;
-    --gold:#d4af37;
-    --dark:#2f2f2f;
-    --white:#ffffff;
+  --ink:#2b1c21;
+  --muted:#6d5d62;
+  --wine:#7a2e45;
+  --rose:#b76e79;
+  --gold:#a8873a;
+  --ivory:#faf6f1;
+  --paper:#ffffff;
+  --blush:#f4e8e9;
+  --line:#e8ddd3;
+  --serif:'Fraunces',Georgia,serif;
+  --sans:'Plus Jakarta Sans','Segoe UI',sans-serif;
 }
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:var(--sans);background:var(--ivory);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.container{width:90%;max-width:1140px;margin:auto}
+section{padding:96px 0}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.15;letter-spacing:-.01em}
+.section-head{max-width:560px;margin-bottom:48px}
+.section-head h2{font-size:clamp(2rem,4vw,2.7rem);color:var(--wine);margin-bottom:12px}
+.section-head p{color:var(--muted)}
 
-body{
-    font-family:'Segoe UI',sans-serif;
-    background:var(--secondary);
-    color:var(--dark);
-}
+/* NAV */
+.navbar{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(250,246,241,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-container{display:flex;justify-content:space-between;align-items:center;height:72px}
+.logo{font-family:var(--serif);font-size:1.3rem;font-weight:600;text-decoration:none;color:var(--wine)}
+.nav-menu{display:flex;gap:26px;list-style:none;align-items:center}
+.nav-menu a{text-decoration:none;font-size:.92rem;font-weight:500;color:var(--muted);transition:color .2s}
+.nav-menu a:hover{color:var(--wine)}
+.nav-menu .nav-cta{color:#fff;background:var(--wine);padding:9px 20px;border-radius:6px}
+.nav-menu .nav-cta:hover{color:#fff;background:#611f35}
+.menu-toggle{display:none;background:none;border:0;font-size:1.4rem;color:var(--wine);cursor:pointer;padding:8px}
 
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-}
-
-section{
-    padding:100px 0;
-}
-
-.section-title{
-    text-align:center;
-    font-size:2.5rem;
-    margin-bottom:50px;
-    color:var(--primary);
-}
-
-/* NAVBAR */
-
-.navbar{
-    position:fixed;
-    width:100%;
-    top:0;
-    background:white;
-    box-shadow:0 2px 15px rgba(0,0,0,.08);
-    z-index:999;
-}
-
-.nav-container{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 0;
-}
-
-.logo{
-    text-decoration:none;
-    color:var(--primary);
-    font-size:1.7rem;
-    font-weight:700;
-}
-
-.logo span{
-    color:var(--gold);
-}
-
-.nav-menu{
-    display:flex;
-    gap:25px;
-    list-style:none;
-}
-
-.nav-menu a{
-    text-decoration:none;
-    color:#333;
-    font-weight:600;
-}
+/* BUTTONS */
+.btn{display:inline-block;text-decoration:none;font:600 .95rem var(--sans);padding:14px 28px;border-radius:6px;border:1.5px solid transparent;cursor:pointer;transition:background .2s,color .2s}
+.btn-primary{background:var(--wine);color:#fff}
+.btn-primary:hover{background:#611f35}
+.btn-outline{border-color:var(--wine);color:var(--wine)}
+.btn-outline:hover{background:var(--wine);color:#fff}
 
 /* HERO */
+.hero{padding:150px 0 90px;background:linear-gradient(180deg,var(--blush) 0%,var(--ivory) 100%)}
+.hero-container{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:8px;font-size:.88rem;font-weight:500;color:var(--wine);border:1px solid var(--rose);padding:6px 16px;border-radius:99px;margin-bottom:24px}
+.hero h1{font-size:clamp(2.8rem,6vw,4.6rem);color:var(--ink);margin-bottom:18px}
+.hero-role{font-size:1.1rem;color:var(--gold);font-weight:600;margin-bottom:20px}
+.hero-description{max-width:520px;color:var(--muted);margin-bottom:32px}
+.hero-buttons{display:flex;gap:14px;flex-wrap:wrap}
 
-.hero{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    background:
-    linear-gradient(
-    135deg,
-    #fff8fa,
-    #fce9ee,
-    #fff);
-}
+.profile-wrapper{position:relative;max-width:380px;margin-left:auto}
+.profile-wrapper::before{content:"";position:absolute;inset:18px -18px -18px 18px;border:2px solid var(--gold);border-radius:190px 190px 12px 12px}
+.profile-wrapper img{position:relative;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:190px 190px 12px 12px;background:var(--blush)}
+.experience-badge{position:absolute;left:-28px;bottom:36px;background:var(--paper);padding:14px 20px;border-radius:10px;box-shadow:0 10px 30px rgba(43,28,33,.14);font-size:.9rem;font-weight:600;color:var(--wine);display:flex;gap:10px;align-items:center}
+.experience-badge i{color:var(--gold)}
 
-.hero-container{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:50px;
-    align-items:center;
-}
-
-.premium-badge{
-    display:inline-block;
-    padding:10px 25px;
-    color:white;
-    border-radius:30px;
-    margin-bottom:20px;
-    font-size:.9rem;
-    background:linear-gradient(
-    135deg,
-    var(--primary),
-    var(--gold));
-}
-
-.hero h1{
-    font-size:4rem;
-    margin:10px 0;
-}
-
-.hero h1 span{
-    color:var(--gold);
-}
-
-.hero h2{
-    color:var(--primary);
-    margin-bottom:20px;
-}
-
-.hero-description{
-    line-height:1.9;
-    margin-bottom:25px;
-}
-
-.hero-buttons{
-    display:flex;
-    gap:15px;
-    margin-top:25px;
-}
-
-.btn{
-    text-decoration:none;
-    padding:15px 30px;
-    border-radius:50px;
-    font-weight:600;
-}
-
-.btn-primary{
-    background:linear-gradient(
-    135deg,
-    var(--primary),
-    var(--gold));
-    color:white;
-}
-
-.btn-outline{
-    border:2px solid var(--primary);
-    color:var(--primary);
-}
-
-.profile-wrapper{
-    position:relative;
-    text-align:center;
-}
-
-.profile-wrapper img{
-    width:420px;
-    height:420px;
-    object-fit:cover;
-    border-radius:50%;
-    border:8px solid white;
-    box-shadow:0 15px 45px rgba(0,0,0,.15);
-}
-
-.experience-badge{
-    position:absolute;
-    bottom:20px;
-    right:0;
-    background:white;
-    padding:15px 25px;
-    border-radius:30px;
-    box-shadow:0 5px 20px rgba(0,0,0,.15);
-}
-
-.hero-stats{
-    display:flex;
-    gap:20px;
-    margin-top:40px;
-}
-
-.stat-card{
-    background:white;
-    padding:20px;
-    border-radius:15px;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
-}
-
-.stat-card h3{
-    color:var(--primary);
-}
+/* STATS */
+.stats{background:var(--wine);color:#fff;padding:0}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+.stat{padding:36px 24px;text-align:center;border-right:1px solid rgba(255,255,255,.15)}
+.stat:last-child{border-right:0}
+.stat strong{display:block;font-family:var(--serif);font-size:2.4rem;font-weight:600}
+.stat span{font-size:.92rem;color:#ecd9dd}
 
 /* ABOUT */
-
-.about-container{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:50px;
-    align-items:center;
-}
-
-.about-image img{
-    width:100%;
-    border-radius:20px;
-}
-
-.about-content p{
-    margin-bottom:15px;
-    line-height:1.8;
-}
-
-.about-info{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:15px;
-    margin-top:25px;
-}
-
-.about-info div{
-    background:white;
-    padding:20px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
-}
+.about-container{display:grid;grid-template-columns:.85fr 1.15fr;gap:72px;align-items:center}
+.about-image img{width:100%;aspect-ratio:1/1.1;object-fit:cover;border-radius:12px;background:var(--blush)}
+.about-content h3{font-size:1.8rem;color:var(--wine);margin-bottom:18px}
+.about-content p{color:var(--muted);margin-bottom:14px;max-width:560px}
+.about-info{display:grid;grid-template-columns:1fr 1fr;margin-top:28px;border-top:1px solid var(--line)}
+.about-info div{padding:16px 0;border-bottom:1px solid var(--line)}
+.about-info span{display:block;font-size:.82rem;color:var(--muted)}
+.about-info p{margin:0;color:var(--ink);font-weight:600}
 
 /* SKILLS */
-
-.skills-container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-}
-
-.skill-card{
-    background:white;
-    padding:30px;
-    text-align:center;
-    border-radius:20px;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-    transition:.3s;
-}
-
-.skill-card:hover{
-    transform:translateY(-10px);
-}
-
-.skill-card i{
-    font-size:3rem;
-    color:var(--primary);
-    margin-bottom:20px;
-}
+.skills{background:var(--paper);border-block:1px solid var(--line)}
+.skills-container{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.skill-card{padding:36px 32px;background:var(--ivory);border-right:1px solid var(--line);border-bottom:1px solid var(--line);margin:0 -1px -1px 0}
+.skill-card i{display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--blush);color:var(--wine);font-size:1.15rem;margin-bottom:18px}
+.skill-card h3{font-size:1.2rem;margin-bottom:8px}
+.skill-card p{color:var(--muted);font-size:.95rem}
 
 /* EXPERIENCE */
-
-.experience-card{
-    background:white;
-    padding:40px;
-    border-radius:20px;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-    text-align:center;
-}
-
-.experience-card i{
-    font-size:3rem;
-    color:var(--gold);
-    margin-bottom:15px;
-}
+.timeline{max-width:760px;border-left:2px solid var(--line);padding-left:36px;position:relative}
+.timeline-item{position:relative;padding-bottom:8px}
+.timeline-item::before{content:"";position:absolute;left:-45px;top:8px;width:16px;height:16px;border-radius:50%;background:var(--gold);border:4px solid var(--ivory)}
+.timeline-item h3{font-size:1.5rem;color:var(--wine);margin-bottom:6px}
+.timeline-item .meta{font-size:.9rem;color:var(--gold);font-weight:600;margin-bottom:12px}
+.timeline-item p{color:var(--muted)}
+.values{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.values li{list-style:none;font-size:.88rem;padding:6px 14px;border-radius:99px;background:var(--blush);color:var(--wine);font-weight:500}
 
 /* CONTACT */
-
-.contact-container{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
-}
-
-.contact-info{
-    background:white;
-    padding:30px;
-    border-radius:20px;
-}
-
-.contact-item{
-    margin-top:20px;
-}
-
-.contact-item i{
-    color:var(--primary);
-    margin-right:10px;
-}
-
-.contact-form{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-}
-
-.contact-form input,
-.contact-form textarea{
-    padding:15px;
-    border:1px solid #ddd;
-    border-radius:10px;
-}
+.contact{background:var(--paper);border-top:1px solid var(--line)}
+.contact-container{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px}
+.contact-info h3{font-size:1.7rem;color:var(--wine);margin-bottom:12px}
+.contact-info>p{color:var(--muted);margin-bottom:28px}
+.contact-item{display:flex;align-items:center;gap:14px;margin-bottom:16px;font-weight:500}
+.contact-item i{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--blush);color:var(--wine)}
+.contact-form{display:flex;flex-direction:column;gap:16px}
+.contact-form label{font-size:.88rem;font-weight:600;margin-bottom:-8px}
+.contact-form input,.contact-form textarea{font:inherit;padding:14px 16px;border:1px solid var(--line);border-radius:6px;background:var(--ivory);color:var(--ink);transition:border-color .2s}
+.contact-form input:focus,.contact-form textarea:focus{border-color:var(--wine);outline:none;box-shadow:0 0 0 3px rgba(122,46,69,.15)}
+.contact-form button{align-self:flex-start}
 
 /* FOOTER */
+footer{background:var(--ink);color:#d9ccd0;padding:40px 0;text-align:center;font-size:.9rem}
+.footer-social{margin-bottom:14px}
+.footer-social a{display:inline-grid;place-items:center;width:40px;height:40px;margin:0 5px;border:1px solid rgba(255,255,255,.25);border-radius:50%;color:#fff;text-decoration:none;transition:background .2s}
+.footer-social a:hover{background:var(--wine)}
 
-footer{
-    background:#222;
-    color:white;
-    text-align:center;
-    padding:30px;
+
+/* TIMELINE+ */
+.timeline-item+.timeline-item{margin-top:44px}
+.timeline-item.edu::before{background:var(--wine)}
+.timeline-item .place{font-weight:600;margin-bottom:2px}
+.timeline-group{font-family:var(--serif);font-size:1.15rem;color:var(--muted);margin:48px 0 28px -36px;padding-left:36px}
+.timeline-group:first-child{margin-top:0}
+
+/* ACHIEVEMENTS */
+.achievements{background:var(--paper);border-block:1px solid var(--line)}
+.ach-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.ach{padding:28px 24px;border:1px solid var(--line);border-radius:12px;background:var(--ivory)}
+.ach .year{font-family:var(--serif);font-size:1.9rem;color:var(--gold);font-weight:600}
+.ach h3{font-size:1.1rem;margin:8px 0}
+.ach p{color:var(--muted);font-size:.92rem}
+
+/* TESTIMONIALS */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.testi{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:32px;display:flex;flex-direction:column;justify-content:space-between;gap:28px}
+.testi blockquote{font-family:var(--serif);font-size:1.08rem;line-height:1.65}
+.testi-who{display:flex;gap:12px;align-items:center}
+.avatar{flex:none;width:44px;height:44px;border-radius:50%;background:var(--blush);color:var(--wine);display:grid;place-items:center;font-weight:600}
+.testi-who strong{display:block;font-size:.95rem}
+.testi-who span{font-size:.85rem;color:var(--muted)}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  section{padding:72px 0}
+  .hero{padding-top:120px}
+  .hero-container,.about-container,.contact-container{grid-template-columns:1fr;gap:48px}
+  .profile-wrapper{margin:0 auto 0 0;max-width:320px}
+  .experience-badge{left:-8px}
+  .skills-container,.ach-grid{grid-template-columns:1fr 1fr}
+  .testi-grid{grid-template-columns:1fr}
+  .menu-toggle{display:block}
+  .nav-menu{position:absolute;top:72px;left:0;right:0;flex-direction:column;gap:0;background:var(--ivory);border-bottom:1px solid var(--line);display:none;padding:12px 5%;align-items:stretch}
+  .nav-menu.open{display:flex}
+  .nav-menu li a{display:block;padding:14px 0}
+  .nav-menu .nav-cta{text-align:center;margin-top:8px}
+}
+@media(max-width:560px){
+  .skills-container,.ach-grid{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:1fr}
+  .stat{border-right:0;border-bottom:1px solid rgba(255,255,255,.15);padding:24px}
+  .about-info{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* ===== UI REFINEMENT ===== */
+/* Skala tipografi dan ritme vertikal */
+body{font-size:16px}
+.section-head h2{letter-spacing:-.02em}
+.section-head{margin-bottom:56px}
+
+/* Navbar: bayangan tipis saat di-scroll */
+.navbar{transition:box-shadow .3s,background .3s}
+.navbar.scrolled{box-shadow:0 8px 24px rgba(43,28,33,.07);background:rgba(250,246,241,.97)}
+.nav-menu a:not(.nav-cta){position:relative;padding:4px 0}
+.nav-menu a:not(.nav-cta)::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nav-menu a:not(.nav-cta):hover::after{transform:scaleX(1)}
+
+/* Hero: nama lebih dominan, aksen garis emas */
+.hero{padding:160px 0 110px}
+.hero h1{font-size:clamp(3rem,6.4vw,5rem);line-height:1.05;font-weight:600}
+.hero-role{display:flex;align-items:center;gap:14px;font-size:1.05rem}
+.hero-role::before{content:"";width:40px;height:1.5px;background:var(--gold)}
+.hero-description{font-size:1.05rem;line-height:1.8}
+.badge i{font-size:.8rem}
+
+/* Tombol: umpan balik sentuh yang halus */
+.btn{display:inline-flex;align-items:center;gap:8px;transition:background .2s,color .2s,transform .2s,box-shadow .2s}
+.btn-primary{box-shadow:0 8px 20px rgba(122,46,69,.22)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(122,46,69,.28)}
+.btn:active{transform:translateY(0)}
+
+/* Foto hero: bingkai dan badge yang lebih rapi */
+.profile-wrapper{max-width:400px}
+.profile-wrapper img{box-shadow:0 30px 60px -20px rgba(43,28,33,.28)}
+.experience-badge{left:-32px;bottom:44px;font-size:.88rem}
+
+/* Statistik */
+.stat strong{font-size:2.6rem;line-height:1.1}
+
+/* Tentang */
+.about-content h3{font-size:clamp(1.6rem,2.6vw,2rem);line-height:1.2;margin-bottom:20px}
+.about-content p{font-size:1.02rem;line-height:1.8}
+.about-info div{transition:background .2s}
+.about-info div:hover{background:var(--blush)}
+
+/* Keahlian: grid dengan hover lembut tanpa efek angkat */
+.skill-card{transition:background .25s}
+.skill-card:hover{background:var(--paper)}
+.skill-card i{transition:background .25s,color .25s}
+.skill-card:hover i{background:var(--wine);color:#fff}
+
+/* Garis waktu */
+.timeline{padding-left:40px}
+.timeline-item::before{left:-49px;top:6px;width:14px;height:14px;border-width:3px}
+.timeline-item h3{font-size:1.4rem}
+.timeline-item p{font-size:.98rem}
+.timeline-item .meta{font-size:.86rem;letter-spacing:.01em}
+
+/* Prestasi */
+.ach{transition:border-color .25s,transform .25s}
+.ach:hover{border-color:var(--gold);transform:translateY(-3px)}
+.ach .year{font-size:2rem;line-height:1}
+
+/* Testimoni */
+.testi{transition:box-shadow .3s}
+.testi:hover{box-shadow:0 18px 40px -22px rgba(43,28,33,.25)}
+.testi blockquote::before{content:"“";display:block;font-size:3rem;line-height:.6;color:var(--gold);margin-bottom:12px}
+.testi blockquote{quotes:none}
+
+/* Kontak */
+.contact-form input,.contact-form textarea{background:#fff}
+.contact-form label{color:var(--ink)}
+.contact-item{padding:14px 18px;border:1px solid var(--line);border-radius:10px;background:var(--ivory);margin-bottom:12px}
+.contact-item i{flex:none}
+
+/* Footer */
+footer{padding:48px 0}
+footer p{color:#bfb0b5}
+
+/* Satu momen muat halaman (menghormati reduced motion) */
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.hero-container>*{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.hero-container>*:nth-child(2){animation-delay:.12s}
+
+@media(max-width:900px){
+  .hero{padding:130px 0 80px}
+  .experience-badge{left:-8px}
+  .profile-wrapper{margin:0 auto}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-container>*{animation:none}
+  .ach:hover,.btn-primary:hover{transform:none}
 }
 
-.footer-social{
-    margin-bottom:15px;
-}
-
-.footer-social a{
-    color:white;
-    font-size:1.3rem;
-    margin:0 10px;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-.hero-container,
-.about-container,
-.contact-container{
-grid-template-columns:1fr;
-text-align:center;
-}
-
-.hero h1{
-font-size:2.5rem;
-}
-
-.profile-wrapper img{
-width:280px;
-height:280px;
-}
-
-.hero-stats{
-flex-direction:column;
-}
-
-.nav-menu{
-display:none;
-}
-
-}
-
+/* Foto: fokus pada wajah */
+.profile-wrapper img,.about-image img{object-position:center 20%}
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-<div class="container nav-container">
-
-<a href="#" class="logo">
-Uliana<span>.Portfolio</span>
-</a>
-
-<ul class="nav-menu">
-<li><a href="#home">Beranda</a></li>
-<li><a href="#about">Tentang</a></li>
-<li><a href="#skills">Keahlian</a></li>
-<li><a href="#experience">Pengalaman</a></li>
-<li><a href="#contact">Kontak</a></li>
-</ul>
-
-</div>
+<nav class="navbar" aria-label="Navigasi utama">
+  <div class="container nav-container">
+    <a href="#home" class="logo">Uliana Citra Sitorus</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false" aria-controls="navMenu"><i class="fas fa-bars"></i></button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#home">Beranda</a></li>
+      <li><a href="#about">Tentang</a></li>
+      <li><a href="#skills">Keahlian</a></li>
+      <li><a href="#experience">Pengalaman</a></li>
+      <li><a href="#achievements">Prestasi</a></li>
+      <li><a href="#testimonials">Testimoni</a></li>
+      <li><a href="#contact" class="nav-cta">Hubungi Saya</a></li>
+    </ul>
+  </div>
 </nav>
 
-<!-- HERO -->
-<section id="home" class="hero">
+<header id="home" class="hero">
+  <div class="container hero-container">
+    <div>
+      <span class="badge"><i class="fas fa-graduation-cap"></i> Guru Profesional</span>
+      <h1>Uliana Citra Br. Sitorus</h1>
+      <p class="hero-role">Pendidik, mentor, dan inspirator</p>
+      <p class="hero-description">
+        Saya membimbing siswa agar tumbuh cerdas, berkarakter, dan kreatif melalui pembelajaran yang inovatif, hangat, dan relevan dengan tantangan masa depan.
+      </p>
+      <div class="hero-buttons">
+        <a href="#about" class="btn btn-primary">Kenali Saya</a>
+        <a href="#contact" class="btn btn-outline">Hubungi Saya</a>
+      </div>
+    </div>
 
-<div class="container hero-container">
+    <div class="profile-wrapper">
+      <img src="images/profile.jpg" alt="Foto Uliana Citra Br. Sitorus">
+      <div class="experience-badge"><i class="fas fa-star"></i> Guru Inspiratif</div>
+    </div>
+  </div>
+</header>
 
-<div>
-
-<span class="premium-badge">
-✨ Guru Profesional
-</span>
-
-<h1>
-Uliana Citra
-<span>Br. Sitorus</span>
-</h1>
-
-<h2>
-Educator • Mentor • Inspirator
-</h2>
-
-<p class="hero-description">
-Saya adalah seorang guru profesional yang berdedikasi untuk
-membentuk generasi masa depan yang cerdas, berkarakter,
-kreatif, serta siap menghadapi tantangan global melalui
-pendekatan pembelajaran yang inovatif dan inspiratif.
-</p>
-
-<div class="hero-buttons">
-<a href="#about" class="btn btn-primary">
-Tentang Saya
-</a>
-
-<a href="#contact" class="btn btn-outline">
-Hubungi Saya
-</a>
+<div class="stats" aria-label="Ringkasan pencapaian">
+  <div class="container stats-grid">
+    <div class="stat"><strong>5+</strong><span>Tahun mengajar</span></div>
+    <div class="stat"><strong>500+</strong><span>Siswa dibimbing</span></div>
+    <div class="stat"><strong>100%</strong><span>Dedikasi pada pendidikan</span></div>
+  </div>
 </div>
 
-<div class="hero-stats">
-
-<div class="stat-card">
-<h3>5+</h3>
-<p>Tahun Mengajar</p>
-</div>
-
-<div class="stat-card">
-<h3>500+</h3>
-<p>Siswa Dibimbing</p>
-</div>
-
-<div class="stat-card">
-<h3>100%</h3>
-<p>Dedikasi</p>
-</div>
-
-</div>
-
-</div>
-
-<div class="profile-wrapper">
-
-<img src="images/profile.jpg"
-alt="Uliana Citra Br. Sitorus">
-
-<div class="experience-badge">
-⭐ Guru Inspiratif
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ABOUT -->
 <section id="about">
+  <div class="container about-container">
+    <div class="about-image">
+      <img src="images/profile.jpg" alt="Uliana Citra Br. Sitorus di ruang kelas">
+    </div>
+    <div class="about-content">
+      <div class="section-head" style="margin-bottom:20px">
+        <h2>Tentang Saya</h2>
+      </div>
+      <h3>Setiap anak punya potensi yang layak tumbuh</h3>
+      <p>Saya berkomitmen tinggi pada dunia pendidikan dan percaya bahwa pendidikan yang tepat dapat mengembangkan potensi luar biasa dalam diri setiap anak.</p>
+      <p>Selain mengajar, saya aktif mengembangkan metode pembelajaran yang kreatif dan modern untuk meningkatkan minat belajar siswa.</p>
+      <p>Di luar kelas, saya menekuni kuliner, pengembangan karakter, komunikasi publik, dan kegiatan sosial.</p>
 
-<div class="container">
-
-<h2 class="section-title">
-Tentang Saya
-</h2>
-
-<div class="about-container">
-
-<div class="about-image">
-
-<img src="images/profile.jpg"
-alt="Uliana Citra Br. Sitorus">
-
-</div>
-
-<div class="about-content">
-
-<h3>Guru Profesional</h3>
-
-<p>
-Saya memiliki komitmen tinggi dalam dunia pendidikan
-dan percaya bahwa setiap anak memiliki potensi luar biasa
-yang dapat berkembang melalui pendidikan yang tepat.
-</p>
-
-<p>
-Selain mengajar, saya aktif mengembangkan metode pembelajaran
-yang kreatif dan modern untuk meningkatkan minat belajar siswa.
-</p>
-
-<p>
-Saya juga memiliki ketertarikan besar dalam dunia kuliner,
-pengembangan karakter, komunikasi publik, dan kegiatan sosial.
-</p>
-
-<div class="about-info">
-
-<div>
-<span>Nama</span>
-<p>Uliana Citra Br. Sitorus</p>
-</div>
-
-<div>
-<span>Pekerjaan</span>
-<p>Guru</p>
-</div>
-
-<div>
-<span>Keahlian Utama</span>
-<p>Pendidikan</p>
-</div>
-
-<div>
-<span>Hobi</span>
-<p>Memasak</p>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
+      <div class="about-info">
+        <div><span>Nama</span><p>Uliana Citra Br. Sitorus</p></div>
+        <div><span>Profesi</span><p>Guru</p></div>
+        <div><span>Bidang utama</span><p>Pendidikan</p></div>
+        <div><span>Hobi</span><p>Memasak</p></div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- SKILLS -->
-<section id="skills">
-
-<div class="container">
-
-<h2 class="section-title">
-Keahlian Profesional
-</h2>
-
-<div class="skills-container">
-
-<div class="skill-card">
-<i class="fas fa-chalkboard-teacher"></i>
-<h3>Mengajar</h3>
-<p>Penyampaian materi yang efektif dan menyenangkan.</p>
-</div>
-
-<div class="skill-card">
-<i class="fas fa-book-reader"></i>
-<h3>Literasi Pendidikan</h3>
-<p>Meningkatkan budaya belajar siswa.</p>
-</div>
-
-<div class="skill-card">
-<i class="fas fa-users"></i>
-<h3>Manajemen Kelas</h3>
-<p>Membangun suasana belajar yang nyaman.</p>
-</div>
-
-<div class="skill-card">
-<i class="fas fa-laptop"></i>
-<h3>Teknologi Pendidikan</h3>
-<p>Pemanfaatan media digital dalam pembelajaran.</p>
-</div>
-
-<div class="skill-card">
-<i class="fas fa-heart"></i>
-<h3>Pengembangan Karakter</h3>
-<p>Pembinaan etika, disiplin dan tanggung jawab.</p>
-</div>
-
-<div class="skill-card">
-<i class="fas fa-utensils"></i>
-<h3>Memasak</h3>
-<p>Mengolah berbagai hidangan tradisional maupun modern.</p>
-</div>
-
-</div>
-
-</div>
-
+<section id="skills" class="skills">
+  <div class="container">
+    <div class="section-head">
+      <h2>Keahlian Profesional</h2>
+      <p>Kompetensi yang saya terapkan setiap hari untuk menciptakan pengalaman belajar yang bermakna.</p>
+    </div>
+    <div class="skills-container">
+      <div class="skill-card"><i class="fas fa-chalkboard-teacher"></i><h3>Mengajar</h3><p>Penyampaian materi yang efektif dan menyenangkan.</p></div>
+      <div class="skill-card"><i class="fas fa-book-reader"></i><h3>Literasi Pendidikan</h3><p>Menumbuhkan budaya belajar dan minat baca siswa.</p></div>
+      <div class="skill-card"><i class="fas fa-users"></i><h3>Manajemen Kelas</h3><p>Membangun suasana belajar yang nyaman dan tertib.</p></div>
+      <div class="skill-card"><i class="fas fa-laptop"></i><h3>Teknologi Pendidikan</h3><p>Pemanfaatan media digital dalam pembelajaran.</p></div>
+      <div class="skill-card"><i class="fas fa-heart"></i><h3>Pengembangan Karakter</h3><p>Pembinaan etika, disiplin, dan tanggung jawab.</p></div>
+      <div class="skill-card"><i class="fas fa-utensils"></i><h3>Memasak</h3><p>Mengolah hidangan tradisional maupun modern.</p></div>
+    </div>
+  </div>
 </section>
 
-<!-- EXPERIENCE -->
 <section id="experience">
+  <div class="container">
+    <div class="section-head">
+      <h2>Pengalaman dan Pendidikan</h2>
+      <p>Perjalanan karier dan latar belakang akademik yang membentuk cara saya mengajar.</p>
+    </div>
+    <div class="timeline">
+      <h3 class="timeline-group">Pengalaman kerja</h3>
+      <div class="timeline-item">
+        <h3>Wali Kelas dan Koordinator Literasi</h3>
+        <p class="meta">2024 – Sekarang</p>
+        <p class="place">SD Cahaya Bangsa</p>
+        <p>Memimpin program literasi sekolah, menyusun rencana pembelajaran berbasis proyek, dan mendampingi 32 siswa kelas V setiap tahun ajaran.</p>
+        <ul class="values"><li>Program literasi</li><li>Pembelajaran berbasis proyek</li><li>Mentor guru baru</li></ul>
+      </div>
+      <div class="timeline-item">
+        <h3>Guru Kelas</h3>
+        <p class="meta">2021 – 2024</p>
+        <p class="place">SD Cahaya Bangsa</p>
+        <p>Mengajar Bahasa Indonesia, Matematika, dan PPKn di kelas III dan IV dengan media digital interaktif yang meningkatkan partisipasi siswa.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>Guru Pendamping</h3>
+        <p class="meta">2020 – 2021</p>
+        <p class="place">Bimbingan Belajar Pelita Ilmu</p>
+        <p>Membimbing siswa SD secara kelompok kecil dan menyusun materi remedial untuk mata pelajaran dasar.</p>
+      </div>
 
-<div class="container">
-
-<h2 class="section-title">
-Pengalaman
-</h2>
-
-<div class="experience-card">
-
-<i class="fas fa-graduation-cap"></i>
-
-<h3>
-Guru Profesional
-</h3>
-
-<p>
-Berpengalaman dalam mendidik dan membimbing peserta didik
-melalui metode pembelajaran kreatif, inovatif, dan berbasis
-karakter.
-</p>
-
-</div>
-
-</div>
-
+      <h3 class="timeline-group">Pendidikan</h3>
+      <div class="timeline-item edu">
+        <h3>Sertifikasi Pendidik (PPG)</h3>
+        <p class="meta">2023</p>
+        <p class="place">Universitas Pendidikan Nusantara</p>
+        <p>Program Profesi Guru dengan fokus pada perancangan pembelajaran dan asesmen.</p>
+      </div>
+      <div class="timeline-item edu">
+        <h3>S1 Pendidikan Guru Sekolah Dasar</h3>
+        <p class="meta">2016 – 2020</p>
+        <p class="place">Universitas Pendidikan Nusantara</p>
+        <p>Lulus dengan predikat cum laude, IPK 3,78.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
+<section id="achievements" class="achievements">
+  <div class="container">
+    <div class="section-head">
+      <h2>Prestasi dan Sertifikasi</h2>
+      <p>Pengakuan atas dedikasi dan inovasi dalam dunia pendidikan.</p>
+    </div>
+    <div class="ach-grid">
+      <div class="ach"><div class="year">2025</div><h3>Finalis Lomba Inovasi Pembelajaran</h3><p>Tingkat provinsi, kategori media pembelajaran digital.</p></div>
+      <div class="ach"><div class="year">2024</div><h3>Guru Berprestasi</h3><p>Penghargaan tingkat kecamatan untuk kinerja dan inovasi kelas.</p></div>
+      <div class="ach"><div class="year">2023</div><h3>Sertifikat Pendidik</h3><p>Lulus Program Profesi Guru dengan nilai sangat baik.</p></div>
+      <div class="ach"><div class="year">2023</div><h3>Google Certified Educator Level 1</h3><p>Kompetensi pemanfaatan teknologi dalam pembelajaran.</p></div>
+    </div>
+  </div>
+</section>
 
-<div class="container">
+<section id="testimonials">
+  <div class="container">
+    <div class="section-head">
+      <h2>Kata Mereka</h2>
+      <p>Kesan dari orang tua, rekan guru, dan pimpinan sekolah.</p>
+    </div>
+    <div class="testi-grid">
+      <figure class="testi">
+        <blockquote>“Anak kami jadi lebih percaya diri dan rajin membaca. Bu Uliana sabar dan selalu terbuka berkomunikasi dengan orang tua.”</blockquote>
+        <figcaption class="testi-who"><span class="avatar">RS</span><div><strong>Ratna Simanjuntak</strong><span>Orang tua siswa kelas V</span></div></figcaption>
+      </figure>
+      <figure class="testi">
+        <blockquote>“Beliau rekan kerja yang disiplin dan kreatif. Program literasinya menjadi contoh bagi kelas lain.”</blockquote>
+        <figcaption class="testi-who"><span class="avatar">DH</span><div><strong>Dedi Hutapea, S.Pd.</strong><span>Rekan guru</span></div></figcaption>
+      </figure>
+      <figure class="testi">
+        <blockquote>“Kinerjanya konsisten dan inovatif. Ia mampu menyiapkan siswa yang berkarakter sekaligus berprestasi.”</blockquote>
+        <figcaption class="testi-who"><span class="avatar">MN</span><div><strong>Maria Nainggolan, M.Pd.</strong><span>Kepala Sekolah</span></div></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
 
-<h2 class="section-title">
-Kontak
-</h2>
+<section id="contact" class="contact">
+  <div class="container contact-container">
+    <div class="contact-info">
+      <h3>Mari berkolaborasi</h3>
+      <p>Saya terbuka untuk kolaborasi pendidikan, seminar, pelatihan, dan kegiatan sosial.</p>
+      <div class="contact-item"><i class="fas fa-envelope"></i> emailanda@gmail.com</div>
+      <div class="contact-item"><i class="fas fa-phone"></i> +62 812 xxxx xxxx</div>
+    </div>
 
-<div class="contact-container">
-
-<div class="contact-info">
-
-<h3>Mari Terhubung</h3>
-
-<p>
-Terbuka untuk kolaborasi pendidikan, seminar,
-pelatihan, dan kegiatan sosial.
-</p>
-
-<div class="contact-item">
-<i class="fas fa-envelope"></i>
-emailanda@gmail.com
-</div>
-
-<div class="contact-item">
-<i class="fas fa-phone"></i>
-+62 812 xxxx xxxx
-</div>
-
-</div>
-
-<form class="contact-form">
-
-<input type="text" placeholder="Nama Anda">
-
-<input type="email" placeholder="Email Anda">
-
-<textarea rows="6" placeholder="Pesan Anda"></textarea>
-
-<button class="btn btn-primary">
-Kirim Pesan
-</button>
-
-</form>
-
-</div>
-
-</div>
-
+    <form class="contact-form" id="contactForm">
+      <label for="nama">Nama</label>
+      <input type="text" id="nama" name="nama" placeholder="Nama lengkap" required>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="nama@email.com" required>
+      <label for="pesan">Pesan</label>
+      <textarea id="pesan" name="pesan" rows="5" placeholder="Tulis pesan Anda" required></textarea>
+      <button type="submit" class="btn btn-primary">Kirim pesan</button>
+    </form>
+  </div>
 </section>
 
 <footer>
-
-<div class="footer-social">
-
-<a href="#"><i class="fab fa-facebook"></i></a>
-
-<a href="#"><i class="fab fa-instagram"></i></a>
-
-<a href="#"><i class="fab fa-linkedin"></i></a>
-
-</div>
-
-<p>
-© 2026 Uliana Citra Br. Sitorus.
-Semua Hak Dilindungi.
-</p>
-
+  <div class="container">
+    <div class="footer-social">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+    <p>© 2026 Uliana Citra Br. Sitorus. Semua hak dilindungi.</p>
+  </div>
 </footer>
+
+<script>
+  const toggle = document.getElementById('menuToggle');
+  const menu = document.getElementById('navMenu');
+  toggle.addEventListener('click', () => {
+    const open = menu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    menu.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }));
+
+  // Ganti emailanda@gmail.com dengan email Anda
+  document.getElementById('contactForm').addEventListener('submit', e => {
+    e.preventDefault();
+    const f = e.target;
+    const body = `Nama: ${f.nama.value}\nEmail: ${f.email.value}\n\n${f.pesan.value}`;
+    location.href = `mailto:emailanda@gmail.com?subject=${encodeURIComponent('Pesan dari portofolio')}&body=${encodeURIComponent(body)}`;
+  });
+  const nav = document.querySelector('.navbar');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 10);
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+</script>
 
 </body>
 </html>
