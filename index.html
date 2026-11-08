@@ -162,7 +162,7 @@ footer{background:var(--ink);color:#d9ccd0;padding:40px 0;text-align:center;font
   .testi-grid{grid-template-columns:1fr}
   .menu-toggle{display:block}
   .nav-menu{position:absolute;top:72px;left:0;right:0;flex-direction:column;gap:0;background:var(--ivory);border-bottom:1px solid var(--line);display:none;padding:12px 5%;align-items:stretch}
-  .nav-menu.open{display:flex}
+  .nav-menu.active{display:flex}
   .nav-menu li a{display:block;padding:14px 0}
   .nav-menu .nav-cta{text-align:center;margin-top:8px}
 }
@@ -266,6 +266,17 @@ footer p{color:#bfb0b5}
 
 /* Foto: fokus pada wajah */
 .profile-wrapper img,.about-image img{object-position:center 20%}
+
+/* Perbaikan posisi foto */
+.profile-wrapper::before{inset:14px -14px -14px 14px}
+.profile-wrapper img{aspect-ratio:354/472;height:auto}
+.about-image img{aspect-ratio:354/472;height:auto;object-position:center 15%}
+@media(max-width:900px){
+  .about-image img{max-width:380px;margin:0 auto}
+}
+
+/* Hapus bingkai emas yang bergeser dari foto */
+.profile-wrapper::before{content:none;display:none}
 </style>
 </head>
 
@@ -474,28 +485,58 @@ footer p{color:#bfb0b5}
 </footer>
 
 <script>
-  const toggle = document.getElementById('menuToggle');
-  const menu = document.getElementById('navMenu');
-  toggle.addEventListener('click', () => {
-    const open = menu.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', open);
-  });
-  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    menu.classList.remove('open');
-    toggle.setAttribute('aria-expanded', 'false');
-  }));
+const menuToggle = document.querySelector(".menu-toggle");
+const navMenu = document.querySelector(".nav-menu");
 
-  // Ganti emailanda@gmail.com dengan email Anda
-  document.getElementById('contactForm').addEventListener('submit', e => {
+menuToggle.addEventListener("click", () => {
+    const open = navMenu.classList.toggle("active");
+    menuToggle.setAttribute("aria-expanded", open);
+    menuToggle.setAttribute("aria-label", open ? "Tutup menu" : "Buka menu");
+});
+
+const navLinks = document.querySelectorAll(".nav-menu a");
+navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        navMenu.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Buka menu");
+    });
+});
+
+const sections = document.querySelectorAll("section");
+const observer = new IntersectionObserver(
+    entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+                observer.unobserve(entry.target);
+            }
+        });
+    },
+    { threshold: 0.1 }
+);
+
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+sections.forEach(section => {
+    if (reduceMotion) return;
+    section.style.opacity = "0";
+    section.style.transform = "translateY(30px)";
+    section.style.transition = "opacity .6s ease, transform .6s ease";
+    observer.observe(section);
+});
+
+const nav = document.querySelector(".navbar");
+const onScroll = () => nav.classList.toggle("scrolled", window.scrollY > 10);
+window.addEventListener("scroll", onScroll, { passive: true });
+onScroll();
+
+document.getElementById("contactForm").addEventListener("submit", e => {
     e.preventDefault();
     const f = e.target;
     const body = `Nama: ${f.nama.value}\nEmail: ${f.email.value}\n\n${f.pesan.value}`;
-    location.href = `mailto:emailanda@gmail.com?subject=${encodeURIComponent('Pesan dari portofolio')}&body=${encodeURIComponent(body)}`;
-  });
-  const nav = document.querySelector('.navbar');
-  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 10);
-  window.addEventListener('scroll', onScroll, {passive:true});
-  onScroll();
+    location.href = `mailto:emailanda@gmail.com?subject=${encodeURIComponent("Pesan dari portofolio")}&body=${encodeURIComponent(body)}`;
+});
 </script>
 
 </body>
